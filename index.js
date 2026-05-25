@@ -1,10 +1,24 @@
 "use strict";
+// function fun1(): void {
+//     console.log("Hello");
+// }
 Object.defineProperty(exports, "__esModule", { value: true });
-function fun1() {
-    console.log("Hello");
+let user = {
+    name: "Harkirat",
+    age: 21,
+    address: {
+        state: "UP",
+        city: "haryan",
+        pincode: 512292
+    }
+};
+function isLegal(user) {
+    if (user.age > 18) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
-function fun2(callback) {
-    setTimeout(callback, 1000);
-}
-fun2(fun1);
+console.log(isLegal(user));
 //# sourceMappingURL=index.js.map
