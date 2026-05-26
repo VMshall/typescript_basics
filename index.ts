@@ -1,67 +1,89 @@
-// function fun1(): void {
-//     console.log("Hello");
+// // function fun1(): void {
+// //     console.log("Hello");
+// // }
+
+// // function fun2(callback: () => void): void {
+// //     setTimeout(callback, 1000);
+// // }
+
+// // fun2(fun1)
+
+
+// // function greet(firstName: number | string ) {
+// //     console.log("Hello" + firstName)
+// // }
+
+// // greet("ajay")
+// // greet(1)
+
+
+// // function isLegal(age: number) {
+// //     if (age > 18){
+// //         return true
+// //     } else {
+// //         return false
+// //     }
+// // }
+
+// // console.log(isLegal(12))  
+
+
+// interface User {
+//     name: string,
+//     age: number,
+//     address: Address
+    
 // }
 
-// function fun2(callback: () => void): void {
-//     setTimeout(callback, 1000);
+// interface Address {
+//         state: string,
+//         city: string,
+//         pincode: number
+//     }
+
+// interface OfficeAdd {
+//     address: Address
 // }
 
-// fun2(fun1)
+// let user: User = {
 
-
-// function greet(firstName: number | string ) {
-//     console.log("Hello" + firstName)
+//     name: "Harkirat",
+//     age: 21,
+//     address: {
+//         state: "UP",
+//         city: "haryan",
+//         pincode: 512292
+//     }
 // }
 
-// greet("ajay")
-// greet(1)
-
-
-// function isLegal(age: number) {
-//     if (age > 18){
+// function isLegal(user: User) : boolean {
+//     if (user.age > 18 ) {
 //         return true
-//     } else {
+//     }else {
 //         return false
 //     }
 // }
 
-// console.log(isLegal(12))  
+// console.log(isLegal(user))
 
 
-interface User {
+
+
+
+interface admin {
     name: string,
-    age: number,
-    address: Address
-    
+    permission: string
 }
 
-interface Address {
-        state: string,
-        city: string,
-        pincode: number
-    }
 
-interface OfficeAdd {
-    address: Address
+interface employee {
+    name: string,
+    age: number
+
 }
 
-let user: User = {
+type Master = admin | employee;
 
-    name: "Harkirat",
-    age: 21,
-    address: {
-        state: "UP",
-        city: "haryan",
-        pincode: 512292
-    }
+function greet ( user : Master ) {
+    return "welcome" + greet
 }
-
-function isLegal(user: User) : boolean {
-    if (user.age > 18 ) {
-        return true
-    }else {
-        return false
-    }
-}
-
-console.log(isLegal(user))
